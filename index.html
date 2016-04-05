@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Wwc-recsys by hcorona</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Wwc-recsys</h1>
+      <h2 class="project-tagline">a  recommender systems interactive session, by Humberto Corona (@totopampin)</h2>
+      <a href="https://github.com/hcorona/wwc-recsys" class="btn">View on GitHub</a>
+      <a href="https://github.com/hcorona/wwc-recsys/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/hcorona/wwc-recsys/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>This is the repo I prepared for the WWC recommender systems interactive session / hacknight.
+Here you will find all the relevant resources, as well as the code that will be used.
+The goal of the hacknight is to introduce people to recommender sytems, build your own recommender system and evaluate it
+by generating recommendations for you and other attendees. </p>
+
+<p>This will be a relaxed and interactive environments, with people helping you to go through the examples. If you want, you can join a friend and code together.</p>
+
+<h3>
+<a id="hacknight" class="anchor" href="#hacknight" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>hacknight</h3>
+
+<ul>
+<li>6:00 - 6:30 networking and food</li>
+<li>6:30 - 6:50 presentation (introduction to Recommender Systems)</li>
+<li>6:50 - 8:20 hacking! <img class="emoji" title=":collision:" alt=":collision:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4a5.png" height="20" width="20" align="absmiddle">
+</li>
+<li>8:20 - 8:45 wrap up, questions, show and tell </li>
+</ul>
+
+<h3>
+<a id="before-the-session" class="anchor" href="#before-the-session" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Before the session:</h3>
+
+<ul>
+<li>You need python 3.x installed in your laptop. Click on the <a href="https://www.python.org/downloads/">Python website</a> for more info</li>
+<li>Access to the internet will be provided (we need this to download the datasets)</li>
+<li>Read the presentation slides and the Collaborative filtering entry on wikipedia (on resources)</li>
+<li>Make sure you have ipython or <a href="http://jupyter.readthedocs.org/en/latest/install.html">jupyter notebooks</a> installed </li>
+<li>Find 20 movies you know and rate them (1-5 scale). The first exercise will be to store those ratings in our dataset. 
+It is important to also rate movies you don't like, so the recommender can learn about your taste better.</li>
+</ul>
+
+<h3>
+<a id="getting-ready-to-code" class="anchor" href="#getting-ready-to-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting ready to code:</h3>
+
+<ul>
+<li>Clone or download the repository </li>
+<li>Install the required packages if you don't have them (pandas and scipy)</li>
+<li>run the test example (using ipython or jupyter notebooks). If it works you are ready to go! </li>
+<li>If you want to take a look at the code, you can import the project to your favourite IDE (Pycharm is mine) </li>
+</ul>
+
+<pre><code>if you are familiar with git
+&gt; git clone https://github.com/hcorona/WWC-recsys
+&gt; cd WWC-recsys/
+&gt; jupyter notebook notebooks/example_similarity.ipynb 
+</code></pre>
+
+<pre><code>if you want to download the zipfile 
+&gt; Download https://github.com/hcorona/wwc-recsys/archive/master.zip
+&gt; unzip the file 
+&gt; go to where you unzipped the file 
+&gt; run jupyter notebook notebooks/example_similarity.ipynb 
+</code></pre>
+
+<h3>
+<a id="examples-of-things-you-can-do-or-questions-that-are-interesting" class="anchor" href="#examples-of-things-you-can-do-or-questions-that-are-interesting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples of things you can do or questions that are interesting?</h3>
+
+<ul>
+<li><p>It looks like some of the recommendations are from items we just rated. However, you want people to discover new movies.
+How do you make sure you never get recommendations for items you have rated? </p></li>
+<li><p>Are scores important? Should we filter the recommendations to only show the ones we are really sure people will like? </p></li>
+<li><p>What do we know about the dataset? Start an ipython notebook and plot some basic statistics, it will help you understand 
+many things about. For example, how many ratings does each movie gets? What are the most popular movies? what is the rating distribution?</p></li>
+<li><p>See who are your neighbours, see what they have rated. This is a non-automated way to discover movies, and it also helps to 
+understand how the U-KNN algorithm works. </p></li>
+<li><p>Play with the parameters. For example, are your neighbours better when you use 'pearson correlation' or when you use 'cosine similarity'? </p></li>
+<li><p>Make recommendations for one of your colleagues. Do they like them? Is their perception on quality the same as yours? </p></li>
+<li><p>How long will it take for each algorithm to generate recommendations for all users? Is it scalable? Which one is better? </p></li>
+<li><p>Are the recommendations good? Which algorithm makes better recommendations?</p></li>
+<li><p>Implement the matrix factorization algorithm. It works very well, and it is very similar to the ones used in real-world recommender systems!</p></li>
+</ul>
+
+<h3>
+<a id="resources" class="anchor" href="#resources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources</h3>
+
+<ul>
+<li>Collective Intelligence book : <a href="http://www.amazon.com/gp/product/0596529325/ref=as_li_qf_sp_asin_il?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0596529325&amp;linkCode=as2&amp;tag=tasktoy-20">Programming Collective Intelligence book</a> </li>
+<li>Collective Intelligence (book code): <a href="https://github.com/cataska/programming-collective-intelligence-code">Programming Collective Intelligence code</a>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Collaborative_filtering">Collaborative Filtering on Wikipedia</a></li>
+<li>An introduction to RS from Humberto's talk at #unit conference: <a href="unit2016-HumbertoCorona-RecommenderSystems.pdf">slides</a>
+</li>
+</ul>
+
+<h3>
+<a id="additional-resources" class="anchor" href="#additional-resources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Additional resources</h3>
+
+<ul>
+<li><a href="https://www.codementor.io/spark/tutorial/building-a-recommender-with-apache-spark-python-example-app-part1">Recommendations with Apache Spark</a></li>
+<li><a href="http://grouplens.org/datasets/movielens/">The Movielens dataset website</a></li>
+<li><a href="http://www.recsyswiki.com/wiki/">ACM Recommender Systems Wiki</a></li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/hcorona/wwc-recsys">Wwc-recsys</a> is maintained by <a href="https://github.com/hcorona">hcorona</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
